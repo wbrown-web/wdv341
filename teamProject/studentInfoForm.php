@@ -176,7 +176,8 @@
         $hometownErr = "";
         $careerGoalsErr = "";
         $threewordsErr = "";
-                              $honeyPot = "";
+        $honeyPot = "";
+        $message = "";
         $validForm = false;
 
         function validateFirstName($firstName){
@@ -442,22 +443,22 @@ validateThreeWords
                               </tr>
                               <tr>
                               <td >Program:<br> <select id="program" name="program">
-                                                            <option value="default" <?php if ($_POST['program'] == 'default') echo 'selected="selected"'; ?>>---Select Your Program---</option>
-                                                            <option value="animation" <?php if ($_POST['program'] == 'animation') echo 'selected="selected"'; ?>>Animation</option>
-                                                            <option value="graphicDesign" <?php if ($_POST['program'] == 'graphicDesign') echo 'selected="selected"'; ?>>Graphic Design</option>
-                                                            <option value="photography" <?php if ($_POST['program'] == 'photography') echo 'selected="selected"'; ?>>Photography</option>
-                                                            <option value="videoProduction" <?php if ($_POST['program'] == 'videoProduction') echo 'selected="selected"'; ?>>Video Production</option>
-                                                            <option value="webDevelopment" <?php if ($_POST['program'] == 'webDevelopment') echo 'selected="selected"'; ?>>Web Development</option>
+                                                            <option value="default" <?php if (isset($_POST['program']) == 'default') echo 'selected="selected"'; ?>>---Select Your Program---</option>
+                                                            <option value="animation" <?php if (isset($_POST['program']) == 'animation') echo 'selected="selected"'; ?>>Animation</option>
+                                                            <option value="graphicDesign" <?php if (isset($_POST['program']) == 'graphicDesign') echo 'selected="selected"'; ?>>Graphic Design</option>
+                                                            <option value="photography" <?php if (isset($_POST['program']) == 'photography') echo 'selected="selected"'; ?>>Photography</option>
+                                                            <option value="videoProduction" <?php if (isset($_POST['program']) == 'videoProduction') echo 'selected="selected"'; ?>>Video Production</option>
+                                                            <option value="webDevelopment" <?php if (isset($_POST['program']) == 'webDevelopment') echo 'selected="selected"'; ?>>Web Development</option>
                                              </select><br><span class="error" id="programError"><?= $programErr ?></span><td>
                               </tr>
                               <tr>
                               <td >Secondary Program:<br> <select id="program2" name="program2">
-                                                            <option value="none" <?php if ($_POST['program2'] == 'none') echo 'selected="selected"'; ?>>---No Secondary Program---</option>
-                                                            <option value="animation" <?php if ($_POST['program2'] == 'animation') echo 'selected="selected"'; ?>>Animation</option>
-                                                            <option value="graphicDesign" <?php if ($_POST['program2'] == 'graphicDesign') echo 'selected="selected"'; ?>>Graphic Design</option>
-                                                            <option value="photography" <?php if ($_POST['program2'] == 'photography') echo 'selected="selected"'; ?>>Photography</option>
-                                                            <option value="videoProduction" <?php if ($_POST['program2'] == 'videoProduction') echo 'selected="selected"'; ?>>Video Production</option>
-                                                            <option value="webDevelopment" <?php if ($_POST['program2'] == 'webDevelopment') echo 'selected="selected"'; ?>>Web Development</option>
+                                                            <option value="none" <?php if (isset($_POST['program2']) == 'none') echo 'selected="selected"'; ?>>---No Secondary Program---</option>
+                                                            <option value="animation" <?php if (isset($_POST['program2']) == 'animation') echo 'selected="selected"'; ?>>Animation</option>
+                                                            <option value="graphicDesign" <?php if (isset($_POST['program2']) == 'graphicDesign') echo 'selected="selected"'; ?>>Graphic Design</option>
+                                                            <option value="photography" <?php if (isset($_POST['program2']) == 'photography') echo 'selected="selected"'; ?>>Photography</option>
+                                                            <option value="videoProduction" <?php if (isset($_POST['program2']) == 'videoProduction') echo 'selected="selected"'; ?>>Video Production</option>
+                                                            <option value="webDevelopment" <?php if (isset($_POST['program2']) == 'webDevelopment') echo 'selected="selected"'; ?>>Web Development</option>
                                              </select><br><span class="error" id="program2Error"><?= $programErr ?></span><td>
                               </tr>
                               <tr>
